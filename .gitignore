@@ -1,0 +1,10 @@
+.idea/
+
+**/node_modules
+
+/target
+
+bcdae-component.iml
+
+src/main/webapp/resources/*
+
