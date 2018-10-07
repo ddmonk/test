@@ -6,6 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="waterlab-app" />
+        <module name="waterlab-dao" />
+        <module name="waterlab-model" />
+        <module name="waterlab-service" />
+        <module name="waterlab-util" />
+        <module name="waterlab-web" />
         <module name="waterlabapp" />
         <module name="waterlabdao" />
         <module name="waterlabmodel" />
