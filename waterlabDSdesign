@@ -1,0 +1,32 @@
+## Water Lab introduction ##
+
+### Table Design ###
+#### Meta Info ####
+1. WaterLab_User 
+| user_id | user_name | user_password | user_no | user_telephone | user_position | user_salt | user_create_time | user_update_time
+
+2. WaterLab_Role
+| role_id | role_name | role_description | role_create_time | role_update_time | role_state
+
+3. WaterLab_Permission
+| permission_id | permission_name | permission_description| permission_code | permission_type_id | permission_from
+
+4. WaterLab_Water_Info
+| water_id | water_no | water_name | water_label | water_type (1.river,2.lake) | water_level[1.province,2.city,3.country] | water_description | water_image | water_controller
+
+5. WaterLab_Standard
+|standard_id | standard_name | standard_label | standard_level[Water quality level] | standard_value | standard_equal[1.greater,2.less,3equal]
+
+6. WaterLab_Monitor_site
+|monitor_id | monitor_name | monitor_label | monitor_lac | monitor_long | monitor_description
+
+7. WaterLab_Department
+|department_id| department_name | department_label | department_description
+
+8. WaterLab_Leader_Info
+|leader_id | leader_name | leader_position | leader_telephone | leader_description
+
+#### Detail Info #####
+1. WaterLab_detect_result
+|detect_id | detect_
+
