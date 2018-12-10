@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="generatorConfig.properties"/>
+
+    <context id="devOnly" targetRuntime="MyBatis3">
+        <!-- 生成更多代码的插件 -->
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="com.chinambile.www.str.MySQLLimitPlugin" />
+
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${driver}" connectionURL="${url}" userId="${username}"
+                        password="${password}">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.crazyclub.www.waterlab.model.mybatis"
+                            targetProject="../waterlab-model/src/main/java">
+            <property name="constructorBased" value="false"/>FlumeInfoMapper
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mybatis/generated" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.crazyclub.www.waterlab.dao.mybatis.generated"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--<table tableName="wl_base_user"-->
+               <!--domainObjectName="User">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_role"-->
+               <!--domainObjectName="Role">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_permission"-->
+               <!--domainObjectName="Permission">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_check_type"-->
+               <!--domainObjectName="CheckType">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_company"-->
+               <!--domainObjectName="CompanyInfo">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_department"-->
+               <!--domainObjectName="Department">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_owner"-->
+               <!--domainObjectName="RiverOwner">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_standard"-->
+               <!--domainObjectName="Standard">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_water"-->
+               <!--domainObjectName="Water">-->
+        <!--</table>-->
+        <!--<table tableName="wl_base_checkpoint"-->
+               <!--domainObjectName="CheckPoint">-->
+        <!--</table>-->
+        <table tableName="flume_info"
+               domainObjectName="FlumeInfo">
+        </table>
+    </context>
+</generatorConfiguration>

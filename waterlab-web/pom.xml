@@ -11,5 +11,26 @@
 
     <artifactId>waterlab-web</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.crazycute.www</groupId>
+            <artifactId>waterlab-service</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

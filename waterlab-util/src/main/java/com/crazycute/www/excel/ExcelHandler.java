@@ -1,14 +1,12 @@
 package com.crazycute.www.excel;
 
-import com.crazycute.www.pojo.EnumState;
-import com.crazycute.www.pojo.excel.MonitorStatistics;
-import com.crazycute.www.pojo.excel.*;
+import com.crazycute.www.excel.pojo.EnumState;
+import com.crazycute.www.excel.pojo.excel.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.xssf.usermodel.*;
@@ -18,7 +16,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ExcelHandler {
 
@@ -119,11 +116,18 @@ public class ExcelHandler {
                 }
                 monitor.setNh3_n(nh4.getNumericCellValue());
                 monitor.setTotal_phosphorus(p.getNumericCellValue());
-                if(N.getCellType() == Cell.CELL_TYPE_STRING){
-                    monitor.setTotal_N(0);
-                }else {
-                    monitor.setTotal_N(N.getNumericCellValue());
+                double total_N = 0D;
+                double avg_N;
+                for (MonitorStatistics statistics : subStatistics.getMonitors()){
+                    total_N += statistics.getTotal_N();
                 }
+                avg_N = total_N/subStatistics.getMonitors().size();
+                monitor.setTotal_N(avg_N);
+//                if(N.getCellType() == Cell.CELL_TYPE_STRING){
+//                    monitor.setTotal_N(0);
+//                }else {
+//                    monitor.setTotal_N(N.getNumericCellValue());
+//                }
                 subStatistics.setAvgValues(monitor);
             } else  {
                 MonitorStatistics monitor = new MonitorStatistics();

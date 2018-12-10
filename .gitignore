@@ -4,7 +4,9 @@
 
 /target
 
-bcdae-component.iml
+waterlab.iml
+
+water-lab.iml
 
 src/main/webapp/resources/*
 

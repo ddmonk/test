@@ -1,11 +1,11 @@
 package com.crazycute.www.excel;
 
-import com.crazycute.www.pojo.EnumState;
-import com.crazycute.www.pojo.excel.MonitorStatistics;
-import com.crazycute.www.pojo.excel.RiverOwner;
-import com.crazycute.www.pojo.excel.RiverStatistics;
-import com.crazycute.www.pojo.excel.RiverSubStatistics;
-import com.crazycute.www.pojo.statics.*;
+import com.crazycute.www.excel.pojo.EnumState;
+import com.crazycute.www.excel.pojo.excel.MonitorStatistics;
+import com.crazycute.www.excel.pojo.excel.RiverOwner;
+import com.crazycute.www.excel.pojo.excel.RiverStatistics;
+import com.crazycute.www.excel.pojo.excel.RiverSubStatistics;
+import com.crazycute.www.excel.pojo.statics.*;
 
 public class BuildEMS {
 
@@ -21,6 +21,9 @@ public class BuildEMS {
                 result.append(handlerSubStatistics(riverStatistics.getSubStatistics().get(0),true,false));
                 result.append("，");
                 result.append(handlerSubStatistics(riverStatistics.getSubStatistics().get(1),false,true));
+            }
+            if (riverStatistics.getSubStatistics().size() > 2) {
+                System.out.println(riverStatistics.getSubStatistics().size());
             }
             result.append("；");
         }
@@ -104,9 +107,10 @@ public class BuildEMS {
 
         }
         //总氮量
-        if (subStatistics.getElementLevel().getTotalN() != null  && subStatistics.getType() == EnumState.WaterType.LAKE) {
+        if (subStatistics.getType() == EnumState.WaterType.LAKE && now.getTotal_N() != 0d) {
             result.append(addComma(result));
-            result.append(String.format(Template.MSG_N, subStatistics.getTargetQuality().getName(), level.N, String.format("%.2f", now.getTotal_N()), subStatistics.getElementLevel().getTotalN().getName()));
+            result.append(String.format(Template.MSG_N_1,String.format("%.2f", now.getTotal_N())));
+//            result.append(String.format(Template.MSG_N, subStatistics.getTargetQuality().getName(), level.N, String.format("%.2f", now.getTotal_N()), subStatistics.getElementLevel().getTotalN().getName()));
         }
         return result;
     }

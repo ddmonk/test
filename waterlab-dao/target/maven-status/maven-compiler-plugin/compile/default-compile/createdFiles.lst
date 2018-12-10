@@ -1,0 +1,11 @@
+com\crazyclub\www\waterlab\dao\mybatis\generated\StandardMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\PermissionMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\CheckPointMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\DepartmentMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\RoleMapper.class
+com\crazyclub\www\waterlab\dao\MybatisConfig.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\UserMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\CompanyInfoMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\WaterMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\CheckTypeMapper.class
+com\crazyclub\www\waterlab\dao\mybatis\generated\RiverOwnerMapper.class

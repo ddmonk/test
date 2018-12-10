@@ -35,6 +35,7 @@
         <jdbc.mysql.version>5.1.41</jdbc.mysql.version>
         <netty.version>5.0.0.Alpha2</netty.version>
         <curator-framework.version>2.9.0</curator-framework.version>
+        <shiro.version>1.4.0</shiro.version>
     </properties>
     <dependencies>
         <dependency>
@@ -46,6 +47,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
             <!--<dependency>-->
                 <!--<groupId>org.springframework.boot</groupId>-->
                 <!--<artifactId>spring-boot-starter-web</artifactId>-->

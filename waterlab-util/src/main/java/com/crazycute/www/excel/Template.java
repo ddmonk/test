@@ -11,6 +11,7 @@ public class Template {
     public final static String MSG_P = "总磷（%s类水标准≤%s，现状%s，属于%s类）";
 
     public final static String MSG_N = "参考指标：总氮（%s类水标准≤%s，现状%s，属于%s类）";
+    public final static String MSG_N_1 = "参考指标：总氮（现状%s）";
 
     public final static String MSG_OX = "化学需氧量（%s类水标准≤%s，现状%s，属于%s类）";
 

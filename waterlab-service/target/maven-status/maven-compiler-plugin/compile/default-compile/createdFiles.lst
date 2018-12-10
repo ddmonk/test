@@ -1,0 +1,13 @@
+com\crazyclub\www\waterlab\service\impl\CompanyInfoServiceImpl.class
+com\crazyclub\www\waterlab\service\DepartmentService.class
+com\crazyclub\www\waterlab\service\impl\CheckPointServiceImpl.class
+com\crazyclub\www\waterlab\service\WaterService.class
+com\crazyclub\www\waterlab\service\CheckPointService.class
+com\crazyclub\www\waterlab\service\impl\CheckTypeServiceImpl.class
+com\crazyclub\www\waterlab\service\impl\UserServiceImpl.class
+com\crazyclub\www\waterlab\service\impl\DepartmentServiceImpl.class
+com\crazyclub\www\waterlab\service\UserService.class
+com\crazyclub\www\waterlab\service\RoleService.class
+com\crazyclub\www\waterlab\service\RiverOwnerService.class
+com\crazyclub\www\waterlab\service\CheckTypeService.class
+com\crazyclub\www\waterlab\service\CompanyInfoService.class

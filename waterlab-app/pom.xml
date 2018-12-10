@@ -10,15 +10,51 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>waterlab-app</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-rest</artifactId>
+            <groupId>com.crazycute.www</groupId>
+            <artifactId>waterlab-web</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <!--<excludes>-->
+                            <!--<exclude>application.yml</exclude>-->
+                            <!--<exclude>logback.xml</exclude>-->
+                        <!--</excludes>-->
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>develop</id>
+            <properties>
+                <profiles.active>develop</profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
+
 </project>

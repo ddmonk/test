@@ -1,0 +1,7 @@
+com\crazyclub\www\waterlab\controller\WaterController.class
+com\crazyclub\www\waterlab\controller\CheckPointController.class
+com\crazyclub\www\waterlab\controller\UserController.class
+com\crazyclub\www\waterlab\controller\SecurityController.class
+com\crazyclub\www\waterlab\shiro\DatastoreRealm.class
+com\crazyclub\www\waterlab\controller\RoleController.class
+com\crazyclub\www\waterlab\utils\ResultUtil.class
